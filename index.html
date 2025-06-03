@@ -78,5 +78,13 @@
     <p>&copy; 2025 Othmane LECOEUVRE - Tous droits réservés</p>
   </footer>
   <script src="scripts.js"></script>
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+  
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('show');
+    });
+  </script>  
 </body>
 </html>
