@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Othmane Lecoeuvre – Développeur Web Full Stack</title>
+  <meta name="description" content="Portfolio de Othmane Lecoeuvre, développeur web full stack & graphiste à Céret. Création de sites vitrines modernes, UI/UX sur mesure.">
+  <meta name="author" content="Othmane Lecoeuvre">
+  <link rel="icon" type="image/x-icon" href="favicon_othmane.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="google-site-verification" content="ZNwEbK7qzxITR029mmjk_83EoErzQ5hio8JcYxPSu9U" />
+</head>
+
+<body>
+  <nav role="navigation" class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="Images/logo_othmane_lecoeuvre_dev_clair.png" alt="Logo Othmane Lecoeuvre" />
+      </a>
+  
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      ☰
+    </button>    
+  
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="index.html#projets">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+<main role="main" class="contact">
+    <form id="contact-form" method="POST">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required>
+      
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      
+        <input type="text" name="_gotcha" style="display:none">
+        <button type="submit">Envoyer</button>
+      </form>
+      
+      <!-- Message caché au départ -->
+      <div id="form-message" class="hidden">
+        <p>✅ Merci ! Votre message a été envoyé avec succès.</p>
+      </div>
+      
+    </main>
+ 
+  <footer role="contentinfo">
+    <p>
+     © 2025 Othmane Lecoeuvre – Tous droits réservés.
+    </p>
+   </footer>
+</body>

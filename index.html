@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <nav class="navbar">
+  <nav role="navigation" class="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
         <img src="Images/logo_othmane_lecoeuvre_dev_clair.png" alt="Logo Othmane Lecoeuvre" />
@@ -27,7 +27,7 @@
         <li><a href="index.html">Accueil</a></li>
         <li><a href="a-propos.html">À propos</a></li>
         <li><a href="index.html#projets">Projets</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -66,18 +66,9 @@
         <a href="Projets/nova-design.html">Voir le projet</a>
       </div>
     </div>
-
-    <h2>Contact</h2>
-    <form id="contact-form" action="mailto:lvre.othmane@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Votre nom" required />
-      <input type="email" name="email" placeholder="Votre e-mail" required />
-      <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-    <div id="form-confirmation">✅ Merci pour votre message ! Je vous répondrai au plus vite.</div>
   </section>
 
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; 2025 Othmane LECOEUVRE - Tous droits réservés</p>
   </footer>
   <script src="scripts.js"></script>  

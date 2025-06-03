@@ -27,4 +27,30 @@ if (toggle && links) {
   });
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const message = document.getElementById("form-message");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Empêche l'envoi traditionnel
+
+    const data = new FormData(form);
+
+    fetch("https://formspree.io/f/xblyjvgv", {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" }
+    }).then(response => {
+      if (response.ok) {
+        form.reset(); // Vide le formulaire
+        message.classList.remove("hidden"); // Affiche le message
+      } else {
+        alert("Une erreur est survenue. Merci de réessayer.");
+      }
+    }).catch(error => {
+      alert("Erreur réseau.");
+    });
+  });
+});
+
 
