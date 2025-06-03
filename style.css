@@ -1,35 +1,65 @@
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f9fafc;
+  background-color: #f4f6f8;
   color: #222;
   margin: 0;
   padding: 0;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 header {
-  background: linear-gradient(120deg, #0d6efd, #003eaa);
+  background: linear-gradient(120deg, #1f1c2c, #928dab);
   color: white;
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 4rem 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header img {
+  max-width: 120px;
+  margin-bottom: 1rem;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   margin: 0.5rem 0;
 }
 
 header p {
   font-size: 1.2rem;
-  opacity: 0.9;
+  opacity: 0.85;
+}
+
+section {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #003eaa;
+  border-bottom: 2px solid #dbe2ef;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 .project {
   background: white;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
 .project-list img {
@@ -38,16 +68,11 @@ header p {
   margin-bottom: 1rem;
 }
 
-.project:hover {
-  transform: translateY(-5px);
-}
-
-button,
-a.button-link {
-  background-color: #0d6efd;
+a.button-link, button {
+  background-color: #003eaa;
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.7rem 1.4rem;
   border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
@@ -55,17 +80,23 @@ a.button-link {
   transition: background-color 0.3s ease;
 }
 
-button:hover,
-a.button-link:hover {
-  background-color: #0056d2;
+a.button-link:hover, button:hover {
+  background-color: #001f5c;
 }
 
-footer {
-  background-color: #111;
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 3rem;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+input, textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
 }
 
 #form-confirmation {
@@ -83,8 +114,10 @@ footer {
   opacity: 1;
 }
 
-
-
-
-
-
+footer {
+  background-color: #0a0a23;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+}
