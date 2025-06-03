@@ -7,13 +7,6 @@ body {
   line-height: 1.6;
 }
 
-.navbar {
-  background-color: #003eaa;
-  padding: 1rem 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  border-left: 5px solid #003eaa;
-  border-right: 5px solid #003eaa;
-}
 /* NAVIGATION RESPONSIVE */
 .navbar {
   background-color: #003eaa;

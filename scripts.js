@@ -16,3 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+toggle.addEventListener('click', () => {
+  const expanded = toggle.getAttribute('aria-expanded') === 'true';
+  toggle.setAttribute('aria-expanded', !expanded);
+  links.classList.toggle('show');
+});

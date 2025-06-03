@@ -8,10 +8,9 @@
   </title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
   <link href="../projets.css" rel="stylesheet">
-  </link>
  </head>
  <body>
-  
+
   <nav class="navbar">
     <div class="nav-container">
       <a href="/index.html" class="nav-logo">
@@ -69,5 +68,12 @@
     © 2025 Othmane Lecoeuvre – Tous droits réservés.
    </p>
   </footer>
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('show');
+    });
+  </script>  
  </body>
 </html>
