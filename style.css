@@ -1,0 +1,24 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+.project-list img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+#form-confirmation {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background-color: #d1e7dd;
+  color: #0f5132;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: none;
+}
+#form-confirmation.visible {
+  display: block;
+  opacity: 1;
+}
