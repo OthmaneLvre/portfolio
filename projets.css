@@ -93,3 +93,11 @@ main.project-page a.button-link {
 main.project-page a.button-link:hover {
   background-color: #002b7f;
 }
+
+footer {
+  background-color: #0a0a23;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+}
