@@ -1,226 +1,240 @@
-
-/* === Fichier style.css amélioré pour le portfolio === */
-
-/* Reset de base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Inter', sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  margin: 0;
+  padding: 0;
   line-height: 1.6;
-  color: #1a1a1a;
-  background-color: #ffffff;
-  scroll-behavior: smooth;
 }
 
-/* Conteneur centralisé */
-main,
-.about-container,
-.contact main,
-.project-page main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+/* NAVIGATION RESPONSIVE */
+.navbar {
+  background-color: #003eaa;
+  padding: 1rem 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.hero,
-.introduction {
-  text-align: center;
-}
-
-.hero img {
-  max-width: 180px;
-  height: auto;
-  display: block;
-  margin: 0 auto 1rem;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-.container {
+.nav-container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1rem;
-}
-
-/* Navigation */
-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #0a0a23;
-  color: white;
-  border-left: 8px solid white;
-  border-right: 8px solid white;
+  position: relative;
 }
 
-nav .logo {
-  height: 48px;
+.nav-logo img {
+  height: 40px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-nav .logo:hover {
-  transform: scale(1.05);
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
 }
 
-nav ul {
+.nav-links {
+  list-style: none;
   display: flex;
   gap: 1.5rem;
   list-style: none;
 }
 
-nav a {
+.nav-links a {
   color: white;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-nav a:hover {
-  color: #4f8ef7;
+.nav-links a:hover {
+  color: #dbe6ff;
 }
 
-/* Menu responsive */
-#menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-}
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  nav ul {
+  .nav-links {
     flex-direction: column;
-    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #003eaa;
     width: 100%;
+    display: none;
+    padding: 1rem;
   }
 
-  nav ul.show {
+  .nav-links.show {
     display: flex;
   }
 
-  #menu-toggle {
+  .nav-toggle {
     display: block;
   }
 }
 
-/* Sections */
-section {
-  padding: 3rem 1rem;
-  margin-bottom: 3rem;
-}
-
-h1, h2, h3 {
-  margin-bottom: 1rem;
-}
-
-h1 {
-  font-size: 2.4rem;
-}
-
-h2 {
-  font-size: 1.8rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-}
-
-/* Projets */
-.project {
-  margin-bottom: 2rem;
-  transition: transform 0.3s ease;
-}
-
-.project:hover {
-  transform: translateY(-6px);
-}
-
-.project img {
-  width: 100%;
-  border-radius: 12px;
+header {
+  background: linear-gradient(120deg, #1f1c2c, #928dab);
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Boutons */
-.button-link {
-  display: inline-block;
+header img {
+  max-width: 120px;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2.75rem;
+  margin: 0.5rem 0;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+section {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #003eaa;
+  border-bottom: 2px solid #dbe2ef;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.project-list img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+a.button-link, button {
   background-color: #003eaa;
   color: white;
-  padding: 0.6rem 1.2rem;
+  border: none;
+  padding: 0.7rem 1.4rem;
   border-radius: 6px;
+  cursor: pointer;
   text-decoration: none;
-  margin-top: 1rem;
+  display: inline-block;
   transition: background-color 0.3s ease;
+ 
 }
 
-.button-link:hover {
-  background-color: #002d80;
+a.button-link:hover, button:hover {
+  background-color: #001f5c;
 }
 
-/* Formulaires */
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 input, textarea {
   padding: 0.75rem;
+  font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  width: 100%;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
 }
 
-button {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  background-color: #003eaa;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #002d80;
-}
-
-/* Footer */
-footer {
-  background-color: #0a0a23;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 4rem;
-}
-
-/* Accessibilité */
-a:focus-visible,
-button:focus-visible {
-  outline: 2px dashed #003eaa;
-  outline-offset: 3px;
-}
-
-/* Visibilité conditionnelle */
-.hidden {
+#form-confirmation {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background-color: #d1e7dd;
+  color: #0f5132;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
   display: none;
 }
 
-/* Pages spécifiques */
-.project-page main,
-.contact main,
+#form-confirmation.visible {
+  display: block;
+  opacity: 1;
+}
+
 .about-container {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.about-container h1 {
+  font-size: 2.2rem;
+  color: #003eaa;
+  margin-bottom: 1rem;
+}
+
+.about-container h2 {
+  color: #003eaa;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.about-container ul {
+  list-style-type: "✔️ ";
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-container a {
+  display: inline-block;
+  margin-top: 2rem;
+  background-color: #003eaa;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.about-container a:hover {
+  background-color: #001f5c;
+}
+
+footer {
+  background-color: #0a0a23;
+  color: #fff;
+  text-align: center;
   padding: 2rem 1rem;
-  max-width: 800px;
-  margin: 0 auto;
+  margin-top: 4rem;
 }
